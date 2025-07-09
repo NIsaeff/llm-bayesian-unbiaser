@@ -49,7 +49,7 @@ python bias_scorer.py <input.csv> [-o <output.csv>] [-v <model_version>]
 Example
 
 python bias_scorer.py template.csv
-# Reads `template.csv` and writes something like `template_bias_analysis_20250709_080642.csv`
+### Reads `template.csv` and writes something like `template_bias_analysis_20250709_080642.csv`
 
 After running, the console will display progress messages and the location of the output CSV containing bias scores, confidence intervals, and recommendations.
 
