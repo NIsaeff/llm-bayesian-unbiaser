@@ -34,6 +34,25 @@ python -m textblob.download_corpora
 marimo edit bias_scorer_marimo.py
 ```
 
+💻 Command-Line Interface
+
+Batch-process text data from a CSV template:
+
+python bias_scorer.py <input.csv> [-o <output.csv>] [-v <model_version>]
+
+<input.csv>: Path to your input CSV template (e.g., template.csv).
+
+-o, --output: (Optional) Specify an output file path. If omitted, the tool will generate a file named <basename>_bias_analysis_<YYYYMMDD_HHMMSS>.csv.
+
+-v, --version: (Optional) Set the model version tag (default: v1.0.0).
+
+Example
+
+python bias_scorer.py template.csv
+# Reads `template.csv` and writes something like `template_bias_analysis_20250709_080642.csv`
+
+After running, the console will display progress messages and the location of the output CSV containing bias scores, confidence intervals, and recommendations.
+
 This will open the interactive interface in your browser at `http://localhost:2718`
 
 ## 🔧 Alternative: Run the Original Script
