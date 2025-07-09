@@ -1,18 +1,18 @@
 import marimo
 
-__generated_with = "0.9.14"
+__generated_with = "0.14.8"
 app = marimo.App(width="medium")
 
 
 @app.cell
-def __():
+def _():
     import marimo as mo
 
     return (mo,)
 
 
 @app.cell
-def __():
+def _(mo):
     """
     Bayesian Bias Scoring Tool - Marimo Version
     Demonstrates bias scoring using Python sentiment tools with Bayesian proposition modeling.
@@ -27,11 +27,11 @@ def __():
     warnings.filterwarnings("ignore")
 
     mo.md("# Bayesian Bias Scoring Tool")
-    return Dict, List, SentimentIntensityAnalyzer, TextBlob, Tuple, json, np, warnings
+    return Dict, SentimentIntensityAnalyzer, TextBlob, np
 
 
 @app.cell
-def __(Dict, List, SentimentIntensityAnalyzer, TextBlob, Tuple, np):
+def _(Dict, SentimentIntensityAnalyzer, TextBlob):
     class BayesianBiasScorer:
         """
         A bias scoring system that models sentiments as Bayesian propositions
@@ -177,7 +177,7 @@ def __(Dict, List, SentimentIntensityAnalyzer, TextBlob, Tuple, np):
 
 
 @app.cell
-def __(BayesianBiasScorer):
+def _(BayesianBiasScorer):
     # Initialize the scorer
     scorer = BayesianBiasScorer()
 
@@ -194,7 +194,7 @@ def __(BayesianBiasScorer):
 
 
 @app.cell
-def __(mo):
+def _(mo):
     # Interactive text input for analysis
     text_input = mo.ui.text_area(
         label="Enter text to analyze for bias:",
@@ -206,7 +206,7 @@ def __(mo):
 
 
 @app.cell
-def __(mo, scorer, text_input):
+def _(mo, scorer, text_input):
     def analyze_single_text():
         """Analyze the input text and return formatted results"""
         if text_input.value:
@@ -261,11 +261,11 @@ def __(mo, scorer, text_input):
 
     # Call the function to display results
     analyze_single_text()
-    return (analyze_single_text,)
+    return
 
 
 @app.cell
-def __(SAMPLE_TEXTS, mo, np, scorer):
+def _(SAMPLE_TEXTS, mo, np, scorer):
     def analyze_sample_texts():
         """Analyze all sample texts and return summary"""
         # Analyze all sample texts
@@ -300,7 +300,7 @@ def __(SAMPLE_TEXTS, mo, np, scorer):
 
     # Call the function to display results
     analyze_sample_texts()
-    return (analyze_sample_texts,)
+    return
 
 
 if __name__ == "__main__":
