@@ -182,14 +182,6 @@ P(bias_type|evidence) = P(evidence|bias_type) × P(bias_type) / P(evidence)
 
 Where evidence includes sentiment scores from both TextBlob and VADER.
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -200,14 +192,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [VADER Sentiment](https://github.com/cjhutto/vaderSentiment) for social media-optimized sentiment analysis
 - [marimo](https://marimo.io) for the interactive notebook interface
 - The open source community for making tools like this possible
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [Issues](https://github.com/NIsaeff/llm-bayesian-unbiaser/issues) page
-2. Create a new issue with detailed information
-3. Include your Python version and operating system
-
----
 
 **Happy analyzing! 🎉** Use this tool responsibly to understand and improve the objectivity of text content.
