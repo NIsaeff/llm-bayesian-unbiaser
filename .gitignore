@@ -1,3 +1,11 @@
+# data files
+# Ignore all CSV files
+*.csv
+
+# But keep template.csv
+!template.csv
+:q
+:q
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
